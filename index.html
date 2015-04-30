@@ -1,0 +1,170 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Mobile Web App</title>
+<link rel="stylesheet" href="themes/MyCustom.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<!--<link href="jquery-mobile/jquery.mobile.theme-1.0.min.css" rel="stylesheet" type="text/css"/>
+<link href="jquery-mobile/jquery.mobile.structure-1.0.min.css" rel="stylesheet" type="text/css"/>
+-->
+<link rel="stylesheet" href="themes/jquery.mobile.structure-1.4.5.min.css" />
+<!--<script src="jquery-mobile/jquery-1.6.4.min.js" type="text/javascript"></script>
+--><script src="jquery-mobile/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<script src="themes/jquery.js" type="text/javascript"></script>
+<script src="themes/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+<script type="text/javascript" language="javascript">
+	$(document).on( "pagecreate", function() {
+			
+		$("#submit").click(function(e) {
+            alert("Hello world");
+        });
+		
+		$(".show-page-loading-msg").click(function(e) {
+             var $this = $( this ),
+		        theme = $this.jqmData( "theme" ) || $.mobile.loader.prototype.options.theme,
+		        msgText = $this.jqmData( "msgtext" ) || $.mobile.loader.prototype.options.text,
+		        textVisible = $this.jqmData( "textvisible" ) || $.mobile.loader.prototype.options.textVisible,
+		        textonly = !!$this.jqmData( "textonly" );
+		        html = $this.jqmData( "html" ) || "";
+		    $.mobile.loading( "show", {
+            text: msgText,
+            textVisible: textVisible,
+            theme: theme,
+            textonly: textonly,
+            html: html
+        });
+	});
+});
+</script>
+</head> 
+<body> 
+
+<div data-role="page" class="jqm-demos" id="page">
+	<div class="preview ui-shadow swatch">
+	<div class="ui-header ui-bar-a" data-swatch="a" data-position="fixed" data-theme="a" data-form="ui-bar-a" data-role="header" role="banner">
+		<a class="ui-btn-left ui-btn-corner-all ui-btn ui-icon-home ui-btn-icon-notext ui-shadow" title=" Home " data-form="ui-icon" data-role="button" role="button"> Home </a>
+		<h1 class="ui-title" tabindex="0" role="heading" aria-level="1">Softweb Technologies</h1>
+		<a class="ui-btn-right ui-btn-corner-all ui-btn ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation " data-form="ui-icon" data-role="button" role="button"> Navigation </a>
+	</div>
+	</div>
+    <div class="ui-content ui-page-theme-a" data-form="ui-page-theme-a" data-theme="a" role="main">
+
+    <div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all">
+			<h2>Welcome to Softweb Technologies</h2>
+			<p>
+				<img src="http://softwebtechno.com/images/S_logo.png" style="float:left; padding:20px; width:40%; height:40%;"  />
+                Softweb Technologies is an ISO 9001:2008 Certified Company located in India and Canada with our core activities related into web application development, ecommerce development as well as software development since past 5 years. We have a highly skilled team of 25+ skilled developers providing our remarkable service. 
+			</p>
+            <p>
+            The main focus of Softweb Technologies is on outsourcing, consulting, application development and maintenance. We have completed 5 golden years by providing outstanding services globally in the IT field. We deliver the best possible IT solution blended with our experienced and skilled team of programmers with the best working ambience.
+           	</p>
+            <a href="#page2" class=" ui-btn ui-btn-a ui-icon-arrow-r ui-btn-icon-right ui-shadow ui-corner-all" data-transition="pop">View More Detail</a>.
+		</div>
+    </div>
+	<div data-role="footer"  data-position="fixed">
+		<h4>Developed at <a  target="_blank" href="http://softwebtechno.com">Softweb Technologies</a></h4>
+	</div>
+</div>
+
+<!-- After Enter in Page -->
+<div data-role="page" class="jqm-demos" id="page2" data-quicklinks="true">
+	<div class="preview ui-shadow swatch">
+	<div class="ui-header ui-bar-a" data-swatch="a" data-theme="a" data-form="ui-bar-a" data-role="header" role="banner">
+		<a class="ui-btn-left ui-btn-corner-all ui-btn ui-icon-home ui-btn-icon-notext ui-shadow" title=" Home " data-form="ui-icon" data-role="button" href="#page" role="button" data-transition="pop"> Home </a>
+		<h1 class="ui-title" tabindex="0" role="heading" aria-level="1">Softweb Technologies</h1>
+		<a class="ui-btn-right ui-btn-corner-all ui-btn ui-icon-grid ui-btn-icon-notext ui-shadow" title=" Navigation " data-form="ui-icon" data-role="button" role="button"> Navigation </a>
+	</div>
+	</div>
+	<div data-demo-html="true">
+		<div data-role="tabs">
+			<div data-role="navbar">
+				<ul>
+			      <li><a href="#service" data-theme="a" data-ajax="false" class="ui-btn-active" title="Services">SERVICES</a></li>
+			      <li><a href="#portfolio" title="Portfolio" data-theme="a" data-ajax="false">PORTFOLIO</a></li>
+                  <li><a href="#inquiry" data-theme="a" data-ajax="false" title="Inquiry">INQUIRY</a></li>
+			      <li><a href="#contact" data-theme="a" data-ajax="false" title="Contact Us">CONTACT US</a></li>
+			    </ul>
+			</div>
+
+			<div id="service" class="ui-content">
+				<h1>OUR SERVICES</h1>
+                <div data-role="collapsibleset" data-content-theme="a" data-iconpos="right" id="set">
+                 	<div data-role="collapsible" id="set3" data-collapsed="true">
+                        <h3>Website Development</h3>
+                        <p>Softweb Technologies offers Dynamic Website Designing services to the clients and let them enjoy the benefit to reach the prospective consumer in a much easier and effective way. With a challenging and highly professional set up of proficient designers, we imply the customer’s business idea into a lively design that depicts its purpose of business with full features. We work out to give the client a real time experience from the dynamic website designs which give them great features like user-friendly, effectiveness and interactivity with let them fulfill their goal of earning sales.</p>
+                		<p><strong>Responsive</strong> web design concept is spreading rapidly and becoming the norm. Main benefit of Responsive Web Design is flexible to adapt different screens of website or mobile devices. </p>
+                    </div>
+                	<div data-role="collapsible" id="set3" data-collapsed="true">
+                        <h3>Software Development</h3>
+                        <p>At Softweb Technologies ASP.NET application experts regularly study and update through authentic ASP.NET tutorialand use a web app framework that implements the MVC (model-view-controller) pattern. This offers theASP.NET developers more powerful methods for building elegant websites. The latest tools help our experts understanding the business logic clearly and in addition, give a total control over ASP.NET technology that then accelerates the total project process. All this results in getting you an application that is lightweight, easily manageable and still dynamic.</p>
+                    </div>
+                	<div data-role="collapsible" id="set3" data-collapsed="true">
+                        <h3>SEO</h3>
+                        <p>I'm the collapsible content.</p>
+                    </div>
+                	<div data-role="collapsible" id="set4" data-collapsed="true">
+                        <h3>Mobile Apps</h3>
+                        <p>Mobile technology is becoming popular nowadays. At Softweb Technologies, we provide mobile solutions that help you to communicate with your customers. We build reliable mobile applications across various platforms that make your work easier. All our mobile developers are well experienced and have hands on experience in developing mobile Design and tab apps which involves working on both easy and complex solutions.</p>
+                		<b  class=" ui-btn ui-icon-arrow-r ui-btn-icon-left" data-icon="star">Android</b>
+                        <b class=" ui-btn ui-icon-arrow-r ui-btn-icon-left" data-icon="star">I-Phone</b>
+                        <b  class=" ui-btn ui-icon-arrow-r ui-btn-icon-left" data-icon="star">PhoneGap</b>
+                    </div>
+                	<div data-role="collapsible" id="set5" data-collapsed="true">
+                        <h3>Training</h3>
+                        <p>Softweb Technologies is also provide professional Corporate training in all platform. Like as Bellow</p>
+                		<b  class=" ui-btn ui-icon-arrow-r ui-btn-icon-left" data-icon="star">PHP</b>
+                        <b class=" ui-btn ui-icon-arrow-r ui-btn-icon-left" data-icon="star">Wordpress</b>
+                        <b  class=" ui-btn ui-icon-arrow-r ui-btn-icon-left" data-icon="star">Magento</b>
+                        <b  class=" ui-btn ui-icon-arrow-r ui-btn-icon-left" data-icon="star">ASP.NET</b>
+                        <b class=" ui-btn ui-icon-arrow-r ui-btn-icon-left" data-icon="star">MVA</b>
+                        <b  class=" ui-btn ui-icon-arrow-r ui-btn-icon-left" data-icon="star">Android</b>
+                        <b class=" ui-btn ui-icon-arrow-r ui-btn-icon-left" data-icon="star">I-Phone</b>
+                        <b  class=" ui-btn ui-icon-arrow-r ui-btn-icon-left" data-icon="star">PhoneGap</b>
+                        <b  class=" ui-btn ui-icon-arrow-r ui-btn-icon-left" data-icon="star">Web Design</b>
+                    </div>
+                </div>
+			</div>
+			<div id="portfolio" class="ui-content">
+            	<h1>OUR WORKS</h1>
+                <a href="newyork.html" data-ajax="false" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Click for Portfolio</a>
+			</div>
+            <div id="inquiry"  class="ui-content ui-page-theme-a" data-form="ui-page-theme-a" data-theme="a">
+            	<form action="" method="get">
+				<input type="text" placeholder="Name here" required class="input" data-form="ui-body-a">
+                <input type="tel" placeholder="Contact here" required class="input" data-form="ui-body-a">
+                <input type="email" placeholder="EmailId here" required class="input" data-form="ui-body-a">
+                <select name="select-choice" id="select-choice-a" data-native-menu="false" data-theme="a" data-form="ui-btn-up-a" tabindex="-1">
+				<option value="">SELECT SERVICE</option>
+				<option value="webDevelopment">Website Development</option>
+				<option value="SoftDevelopment">Software Development</option>
+				<option value="SEO">SEO</option>
+                <option value="mobileApp">Mobile App</option>
+                <option value="Training">Training</option>
+			</select>
+                <textarea id="Inquiry" class="input" required placeholder="Write your Inquiry Here"></textarea>
+                <button type="submit" data-icon="star" data-theme="a" data-form="ui-btn-up-a" class=" ui-btn ui-btn-a ui-icon-star ui-btn-icon-left ui-shadow ui-corner-all" data-iconpos="right" id="submit">Send Now</button>
+         		</form>
+			</div>
+            <div id="contact" class="ui-content">
+				<h1>Contact Us</h1>
+                <a href="http://softwebtechno.com" target="_blank" class=" ui-btn ui-icon-star ui-btn-icon-left" data-icon="star">SOFTWEB TECHNOLOGIES</a>
+                <p>
+                B-47, FF, SARDAR MALL, NEAR DIAMOND MILL, ABOVE BANK OF BARODA, NIKOL ROAD, AHMEDABAD-382350, GUJARAT, INDIA.
+                </p>
+                <a href="tel:+919726456102" target="_blank" class=" ui-btn ui-icon-phone ui-btn-icon-left" data-icon="star">
+                	+91 97264 56102
+                </a>
+                <a href="mailto:info@softwebtechno.com" target="_blank" class=" ui-btn ui-icon-mail ui-btn-icon-left" data-icon="star">
+                	info@softwebtechno.com
+                </a>
+			</div>
+		</div>
+	</div>
+    <div data-role="footer"  data-position="fixed">
+		<h4>Developed at <a target="_blank" href="http://softwebtechno.com">Softweb Technologies</a></h4>
+	</div>
+</div><!-- /page -->
+<!--data-textonly="true" data-textvisible="true" data-msgtext="Custom Loader" data-inline="true" data-html='<span class="ui-bar ui-shadow ui-overlay-d ui-corner-all"><img src="http://softwebtechno.com/images/S_logo.png"><h2>is loading for you ...</h2></span>'-->
+</body>
+</html>
